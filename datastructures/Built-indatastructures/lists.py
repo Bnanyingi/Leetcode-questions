@@ -28,3 +28,4 @@ print(list2[0:4:2])
 
 #Print in the reverse order
 print(list2[::-1])
+
