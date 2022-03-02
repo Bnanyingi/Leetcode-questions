@@ -16,6 +16,7 @@
 # stack.append(val2)
 # stack.append(val3)
 # empty()
+
 # a = stack.pop()
 # b = stack.pop()
 # c = stack.pop()
@@ -55,5 +56,5 @@ while  True:
             print('Popped value:', s.pop())
 
     elif do == 3:
-        break 
+        break  
     
