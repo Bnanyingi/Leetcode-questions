@@ -35,4 +35,5 @@ print(dict1.keys())
 #print all values
 print(dict1.values())
 
+#Prints all key value pairs
 print(dict1.items())
