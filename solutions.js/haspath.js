@@ -15,7 +15,7 @@ const hasPath = (graph,src,dst) => {
 
 //breadth first search
 
-const hasPath = (graph,src,dst) => {
+const hasPath1 = (graph,src,dst) => {
     const queue = [src];
 
     while(queue.length > 0) {

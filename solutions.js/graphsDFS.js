@@ -16,10 +16,10 @@ const depthFirstPrint = (graph, source) =>{
 
 
 //recursive approach
-const depthFirstPrint = (graph, source) =>{
+const depthFirstPrint1 = (graph, source) =>{
     console.log(source);
     for(let neighbor of graph[source]){
-        depthFirstPrint(graph, neighbor);
+        depthFirstPrint1(graph, neighbor);
     }
 }
 
