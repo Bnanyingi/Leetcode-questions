@@ -29,29 +29,23 @@ console.log(maxSum(arr, n, k));
 
 
 // Sliding Window 
+//linear time complexity
 
-function maxSum1(arr, n, k){
-    let max = 0;
-    let sum = 0;
-
-    for(let i = 0; i < k; i ++){
-        sum += arr[i];
-        max = sum;
-     
+function maxSubArraySum(nums, size) {
+    if(size < 0 || size > arr1.length) return null;
+    let currSum = 0;
+    let maxSumSeen = -Infinity;
+  
+    for(let i = 0; i < nums.length; i++){
+      currSum += nums[i];
+      if(i >= size - 1){
+        maxSumSeen = Math.max(currSum, maxSumSeen);
+        currSum -= nums[i - (size - 1)];
+  
+      }
     }
-
-    for(let i = k; i < n; i++){
-        sum += arr[i] - arr[i - k];
-        if(sum > max){
-            max = sum;
-        }
-    }
-
-    return max;
-}
-
-
-let arr = [1, 4, 2, 10, 2, 3, 1, 0, 20];
-let k = 4;
-let n = arr.length;
-document.write(maxSum1(arr, n, k));
+    return maxSumSeen;
+  }
+  
+  const arr1 = [1, 2, 3, 5, 4, 8, 6, 2];
+  console.log(maxSubArraySum(arr1, 3));
